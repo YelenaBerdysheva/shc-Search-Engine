@@ -11,10 +11,8 @@ function initialRender() {
   let submitEl = document.querySelector("#submit-id");
   submitEl.addEventListener("click", onSubmit);
 
-  // let fahrenheitLinkEl = document.querySelector("#fahrenheit-link");
-  // fahrenheitLinkEl.addEventListener("click", displayFahrenheitTemperature);
-  // let celsiumLinkEl = document.querySelector("#celsium-link");
-  // celsiumLinkEl.addEventListener("click", displayCelsiumTemperature);
+  let fahrenheitLinkEl = document.querySelector("#fahrenheit-link");
+  fahrenheitLinkEl.addEventListener("click", displayFahrenheitTemperature);
 }
 
 function onSubmit(event) {
