@@ -13,6 +13,8 @@ function initialRender() {
 
   let fahrenheitLinkEl = document.querySelector("#fahrenheit-link");
   fahrenheitLinkEl.addEventListener("click", displayFahrenheitTemperature);
+  let celsiumLinkEl = document.querySelector("#celsium-link");
+  celsiumLinkEl.addEventListener("click", displayCelsiumTemperature);
 }
 
 function onSubmit(event) {
@@ -97,4 +99,10 @@ function displayFahrenheitTemperature(event) {
   let temperatureElement = document.querySelector("#temperature-id");
   let fTemp = Math.round((temperatureGl * 9) / 5 + 32);
   temperatureElement.innerHTML = fTemp;
+}
+function displayCelsiumTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature-id");
+  let cTemp = Math.round(temperatureGl);
+  temperatureElement.innerHTML = cTemp;
 }
