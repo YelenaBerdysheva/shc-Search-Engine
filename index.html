@@ -54,11 +54,15 @@
                 class="weather-icon float-left"
               />
               <div class="float-left">
-                <span id="temperature-id" class="temperature">19</span>
-                <span class="units">
-                  <a href="#" id="celsium-link">°C </a>
-                  |
-                  <a href="#" id="fahrenheit-link">°F</a>
+                <span id="temperature-id" class="temperature">0</span>
+                <span id="units-id" class="units">
+                  °C |
+                  <a
+                    href="#"
+                    id="fahrenheit-link"
+                    onclick="displayFahrenheitTemperature(event)"
+                    >°F</a
+                  >
                 </span>
               </div>
             </div>
