@@ -100,8 +100,10 @@ function displayFahrenheitTemperature(event) {
   unitsEl.innerHTML = `
   °F
   |
-    <a href="#" id="celsium-link" onclick="displayCelsiumTemperature(event)">°C </a>
+    <a href="#" id="celsium-link">°C </a>
   `;
+  let aEl = document.querySelector("#celsium-link");
+  aEl.addEventListener("click", displayCelsiumTemperature);
 }
 function displayCelsiumTemperature(event) {
   event.preventDefault();
@@ -112,6 +114,8 @@ function displayCelsiumTemperature(event) {
   unitsEl.innerHTML = `
     °C
     |
-    <a href="#" id="fahrenheit-link" onclick="displayFahrenheitTemperature(event)">°F</a>
+    <a href="#" id="fahrenheit-link">°F</a>
   `;
+  let fahrenheitLinkEl = document.querySelector("#fahrenheit-link");
+  fahrenheitLinkEl.addEventListener("click", displayFahrenheitTemperature);
 }
